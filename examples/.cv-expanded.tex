@@ -1,0 +1,353 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-skyblue}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{3E6D9C}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+% \definecolor{sectiondivider}{HTML}{5D5D5D}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[rectangle,edge,right]{./examples/profile}
+\name{Gaurav}{Gurjar}
+\position{Data/AI Engineer}
+\address{Ahmedabad, India}
+
+%\mobile{(+91) 760-026-3449}
+% \whatsapp{(+971) 50-963-6801}
+\email{ggurjar333@gmail.com}
+%\dateofbirth{January 1st, 1970}
+% \homepage{www.posquit0.com}
+\github{dataengineergaurav}
+\linkedin{ggurjarsocl}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \x{x-id}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \kaggle{kaggle-id}
+% \hackerrank{hackerrank-id}
+\telegram{yourfriendgaurav}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra information}
+
+% \quote{``Be the change that you want to see in the world.``}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Gaurav Gurjar~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Summary}
+
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvparagraph}
+
+%---------------------------------------------------------
+Data/AI Engineer focused on building analytics and AI systems from scratch for US and Middle East clients. I design and operate cloud data platforms on AWS (Redshift, S3, Glue, Lambda, Athena) and build data products and APIs using Python, SQL, Java, and dbt to power reporting, risk scoring, and market analytics. I work end-to-end from requirements and data modeling to quality frameworks and stakeholder communication, with domain experience in insurance, cannabis analytics, COVID-19 risk modeling, and Dubai real-estate and rental analytics.
+
+\end{cvparagraph}
+\cvsection{Education}
+
+\cventry
+  {Bachelor of Computer Applications}
+  {Dr. Babasaheb Ambedkar Open University, Ahmedabad}
+  {India}
+  {2016}
+  {
+    \begin{cvitems}
+      \item {Coursework in data structures, databases, and software engineering.}
+    \end{cvitems}
+  }
+\cvsection{Skills}
+
+\begin{cvskills}
+
+  \cvskill
+    {Data Platforms}
+    {AWS Redshift, S3, Glue, Lambda, Athena, RDS; GCP data services}
+
+  \cvskill
+    {Data Engineering}
+    {ETL/ELT, dbt, data modeling, dimensional design, data quality frameworks, APIs, CI/CD, orchestration}
+
+  \cvskill
+    {Programming}
+    {Python, SQL, Java, R, Bash}
+
+  \cvskill
+    {Tools}
+    {Git, Docker, Linux, BI/Reporting tools, Excel (advanced macros)}
+
+  \cvskill
+    {Domains}
+    {Insurance, Cannabis analytics, Legal data, Real-estate/rental markets, COVID-19 risk modeling}
+
+\end{cvskills}
+\cvsection{Experience}
+
+\cventry
+  {Senior Data Engineer (Consultant to SageSure)}
+  {ISHIR / SageSure}
+  {Remote}
+  {Apr 2024 -- Jan 2026}
+  {
+    \begin{cvitems}
+      \item {Owned Redshift-based analytics platform for US insurance, building scalable ELT pipelines (dbt, S3, Lambda) and API integrations for high-volume policy and claims data.}
+      \item {Translated business initiatives into data assets and dimensional models, improving query performance and report delivery times for analytics teams.}
+      \item {Implemented data validation suites and tests using data APIs, reducing data quality incidents and rework in downstream reports.}
+      \item {Partnered with BI and product stakeholders to troubleshoot data issues, refine KPIs, and harden the semantic layer for self-service analytics.}
+      \item {Recognized with Rising Star and Team Excellence awards for delivery quality and collaboration.}
+    \end{cvitems}
+  }
+
+\cventry
+  {Data Engineer}
+  {CannaSpyglass}
+  {Remote}
+  {Jun 2021 -- Mar 2024}
+  {
+    \begin{cvitems}
+      \item {Built data pipelines for cannabis wholesalers, transporters, growers, dispensaries, and Google Maps data across AWS and GCP.}
+      \item {Scraped and ingested PDFs, spreadsheets, and e-commerce sources using Scrapy, Requests, and Selenium on EC2, Glue, and Lambda, landing curated datasets in RDS and S3.}
+      \item {Automated data quality checks and troubleshooting workflows, ensuring reliable inputs for BI dashboards and regulatory reporting.}
+      \item {Collaborated with analytics teams to enhance BI tools and create reusable data assets for market and operational insights.}
+    \end{cvitems}
+  }
+
+\cventry
+  {Data Scientist}
+  {AI Squared}
+  {Remote}
+  {May 2020 -- May 2021}
+  {
+    \begin{cvitems}
+      \item {Developed Java Spring Boot APIs and statistical models for a COVID-19 risk assessment platform used by over 2M users.}
+      \item {Created Java bindings for R packages, enabling production-grade statistical workflows and predictive models.}
+      \item {Designed data funneling strategies on AWS (EC2, Glue, S3, Athena, Lambda, RDS) to support advanced analytics and reporting.}
+      \item {Worked closely with stakeholders to define KPIs, run deep-dive analysis, and recommend improvements across multiple projects.}
+    \end{cvitems}
+  }
+
+\cventry
+  {Assistant Project Manager}
+  {Casepoint}
+  {India}
+  {2016 -- 2019}
+  {
+    \begin{cvitems}
+      \item {Managed and delivered data-heavy projects over \$1M revenue, coordinating with US-based senior stakeholders.}
+      \item {Designed data strategies including pipeline design and SQL/NoSQL data stores to support legal analytics and reporting.}
+      \item {Automated reporting and analysis with Excel macros, improving turnaround time and reducing manual effort.}
+      \item {Drove Agile/Scrum ceremonies, tracked risks, and implemented mitigation plans for data processing workflows.}
+    \end{cvitems}
+  }
+%-------------------------------------------------------------------------------
+%SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Extracurricular Activity}
+
+
+%-------------------------------------------------------------------------------
+%CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {Core Member \& President at 2013} % Affiliation/role
+    {PoApper (Developers' Network of POSTECH)} % Organization/group
+    {Pohang, S.Korea} % Location
+    {Jun. 2010 - Jun. 2017} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of experience/contributions/knowledge
+        \item {Reformed the society focusing on software engineering and building network on and off campus.}
+        \item {Proposed various marketing and network activities to raise awareness.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Member} % Affiliation/role
+    {PLUS (Laboratory for UNIX Security in POSTECH)} % Organization/group
+    {Pohang, S.Korea} % Location
+    {Sep. 2010 - Oct. 2011} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of experience/contributions/knowledge
+        \item {Gained expertise in hacking \& security areas, especially about internal of operating system based on UNIX and several exploit techniques.}
+        \item {Participated on several hacking competition and won a good award.}
+        \item {Conducted periodic security checks on overall IT system as a member of POSTECH CERT.}
+        \item {Conducted penetration testing commissioned by national agency and corporation.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+\end{cventries}
+\cvsection{Awards \& Recognition}
+
+\begin{cvhonors}
+
+  \cvhonor
+    {Rising Star Award}
+    {Recognized for delivery quality and collaboration on SageSure data platform.}
+    {}
+    {Year}
+
+  \cvhonor
+    {Team Excellence Award}
+    {Acknowledged for cross-functional teamwork and impact on analytics outcomes.}
+    {}
+    {Year}
+
+\end{cvhonors}
+\cvsection{Certifications}
+
+\begin{cvhonors}
+
+  \cvhonor
+    {IBM Data Engineering Professional Certificate}
+    {Coursera}
+    {}
+    {2025}
+
+  \cvhonor
+    {dbt Fundamentals}
+    {dbt Labs}
+    {}
+    {2025}
+
+\end{cvhonors}
+%-------------------------------------------------------------------------------
+%SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Presentation}
+
+
+%-------------------------------------------------------------------------------
+%CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {Presenter for <Hosting Web Application for Free utilizing GitHub, Netlify and CloudFlare>} % Role
+    {DevFest Seoul by Google Developer Group Korea} % Event
+    {Seoul, S.Korea} % Location
+    {Nov. 2017} % Date(s)
+    {
+      \begin{cvitems} % Description(s)
+        \item {Introduced the history of web technology and the JAM stack which is for the modern web application development.}
+        \item {Introduced how to freely host the web application with high performance utilizing global CDN services.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Presenter for <DEFCON 20th : The way to go to Las Vegas>} % Role
+    {6th CodeEngn (Reverse Engineering Conference)} % Event
+    {Seoul, S.Korea} % Location
+    {Jul. 2012} % Date(s)
+    {
+      \begin{cvitems} % Description(s)
+        \item {Introduced CTF(Capture the Flag) hacking competition and advanced techniques and strategy for CTF}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+\end{cventries}
+%-------------------------------------------------------------------------------
+%SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Writing}
+
+
+%-------------------------------------------------------------------------------
+%CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {Founder \& Writer} % Role
+    {A Guide for Developers in Start-up} % Title
+    {Facebook Page} % Location
+    {Jan. 2015 - PRESENT} % Date(s)
+    {
+      \begin{cvitems} % Description(s)
+        \item {Drafted daily news for developers in Korea about IT technologies, issues about start-up.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+\end{cventries}
+
+
+%-------------------------------------------------------------------------------
+\end{document}

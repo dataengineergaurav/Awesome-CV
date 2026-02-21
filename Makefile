@@ -20,15 +20,18 @@ cv.pdf: $(EXAMPLES_DIR)/cv.tex $(CV_SRCS)
 coverletter.pdf: $(EXAMPLES_DIR)/coverletter.tex
 	$(CC) -output-directory=$(EXAMPLES_DIR) $<
 
-# DOCX targets (converted from LaTeX)
+# DOCX targets (with expanded LaTeX includes)
 resume.docx: $(EXAMPLES_DIR)/resume.tex $(RESUME_SRCS)
-	$(PANDOC) $(EXAMPLES_DIR)/resume.tex -t docx -o $(EXAMPLES_DIR)/resume.docx
+	./expand-latex.sh $(EXAMPLES_DIR)/resume.tex $(EXAMPLES_DIR)/.resume-expanded.tex
+	$(PANDOC) $(EXAMPLES_DIR)/.resume-expanded.tex -t docx -o $(EXAMPLES_DIR)/resume.docx
 
 cv.docx: $(EXAMPLES_DIR)/cv.tex $(CV_SRCS)
-	$(PANDOC) $(EXAMPLES_DIR)/cv.tex -t docx -o $(EXAMPLES_DIR)/cv.docx
+	./expand-latex.sh $(EXAMPLES_DIR)/cv.tex $(EXAMPLES_DIR)/.cv-expanded.tex
+	$(PANDOC) $(EXAMPLES_DIR)/.cv-expanded.tex -t docx -o $(EXAMPLES_DIR)/cv.docx
 
 coverletter.docx: $(EXAMPLES_DIR)/coverletter.tex
-	$(PANDOC) $(EXAMPLES_DIR)/coverletter.tex -t docx -o $(EXAMPLES_DIR)/coverletter.docx
+	./expand-latex.sh $(EXAMPLES_DIR)/coverletter.tex $(EXAMPLES_DIR)/.coverletter-expanded.tex
+	$(PANDOC) $(EXAMPLES_DIR)/.coverletter-expanded.tex -t docx -o $(EXAMPLES_DIR)/coverletter.docx
 
 clean:
-	rm -rf $(EXAMPLES_DIR)/*.pdf $(EXAMPLES_DIR)/*.docx $(EXAMPLES_DIR)/*.aux $(EXAMPLES_DIR)/*.log $(EXAMPLES_DIR)/*.out
+	rm -rf $(EXAMPLES_DIR)/*.pdf $(EXAMPLES_DIR)/*.docx $(EXAMPLES_DIR)/*.aux $(EXAMPLES_DIR)/*.log $(EXAMPLES_DIR)/*.out $(EXAMPLES_DIR)/.*-expanded.tex
