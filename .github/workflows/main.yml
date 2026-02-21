@@ -52,6 +52,7 @@ jobs:
           tag_name: ${{ github.sha }}
           draft: false
           prerelease: false
+          token: ${{ secrets.GITHUB_TOKEN }}
           files: |
             examples/*.pdf
             examples/*.docx
