@@ -81,8 +81,22 @@
 \defaultfontfeatures{
   Renderer=HarfBuzz,
 }
-\setmainfont{Liberation Sans}
-\setsansfont{Liberation Sans}
+\setmainfont{Roboto}[
+  UprightFont=*,
+  ItalicFont=* Italic,
+  BoldFont=* Bold,
+  BoldItalicFont=* Bold Italic,
+  FontFace={l}{n}{Font=* Light},
+  FontFace={l}{it}{Font=* Light Italic},
+]
+\setsansfont{Roboto}[
+  UprightFont=*,
+  ItalicFont=* Italic,
+  BoldFont=* Bold,
+  BoldItalicFont=* Bold Italic,
+  FontFace={l}{n}{Font=* Light},
+  FontFace={l}{it}{Font=* Light Italic},
+]
 \newfontfamily\roboto{Roboto}[
   UprightFont=*,
   ItalicFont=* Italic,
