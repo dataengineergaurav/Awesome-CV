@@ -8,12 +8,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    container: texlive/texlive:latest
+
     steps:
     - name: Checkout repo
       uses: actions/checkout@v6
 
+    - name: Install dependencies
+      run: |
+        apt-get update
+        apt-get install --yes \
+          fonts-roboto \
+          fonts-adobe-sourcesans3 \
+          pandoc
+
     - name: Compile
-      run: docker run --rm -i -w "/doc" -v "$PWD":/doc texlive/texlive:latest bash -c "apt-get update && apt-get install -y pandoc && make"
+      run: make
 
     - uses: actions/upload-artifact@v6
       with:
