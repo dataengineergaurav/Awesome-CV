@@ -95,6 +95,31 @@ docker run --rm --user $(id -u):$(id -g) -i -w "/doc" -v "$PWD":/doc texlive/tex
 
 In either case, this should result in the creation of ``{your-cv}.pdf``
 
+#### Output Formats
+
+This template supports generating documents in multiple formats:
+
+**PDF Format** (Default)
+- High-quality typeset documents
+- Professional appearance with LaTeX rendering
+- Best for printing and formal submissions
+
+**DOCX Format** (Microsoft Word)
+- Editable Word documents via Pandoc conversion
+- Compatible with Microsoft Office and Google Docs
+- Useful for ATS (Applicant Tracking Systems) compatibility
+
+To generate both PDF and DOCX formats:
+
+```bash
+docker run --rm -i -w "/doc" -v "$PWD":/doc texlive/texlive:latest bash -c "apt-get update && apt-get install -y pandoc && make"
+```
+
+This will create:
+- `resume.pdf` and `resume.docx`
+- `cv.pdf` and `cv.docx`
+- `coverletter.pdf` and `coverletter.docx`
+
 
 ## Credit
 
