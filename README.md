@@ -119,7 +119,9 @@ This will create:
 - `resume.pdf` and `resume.docx`
 - `cv.pdf` and `cv.docx`
 - `coverletter.pdf` and `coverletter.docx`
-
+```bash
+echo "=== PDF Files (with content) ===" && ls -lh /workspaces/Awesome-CV/examples/*.pdf 2>/dev/null | awk '{printf "%-45s %6s\n", $9, $5}' && echo "" && echo "=== DOCX Files ===" && ls -lh /workspaces/Awesome-CV/examples/*.docx 2>/dev/null | awk '{printf "%-45s %6s\n", $9, $5}'
+```
 
 ## Credit
 
